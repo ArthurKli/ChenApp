@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>陈家祠</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"  href="css/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet"  href="css/view.css" />
+	<link rel="stylesheet"  href="css/jqm-icon-pack-1.1.1-original.css" />
+    <script type="text/javascript"  src="js/cordova-2.7.0.js"></script>
+	<script src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).bind("mobileinit", function()
+        {
+            if (navigator.userAgent.indexOf("Android") != -1)
+            {
+                $.mobile.defaultPageTransition = 'none';
+                $.mobile.defaultDialogTransition = 'none';
+            }
+        });
+    </script>
+	<script src="js/jquery.mobile-1.2.0.min.js"></script>
+	<script src="js/global.js"></script>
+     <script type="text/javascript">
+
+     </script>
+
+</head> 
+<body>
+<div data-role="page" >
+    <script src="js/view.js"></script>
+
+	<div data-role="header" data-theme="a" data-position="fixed">
+		<div data-type="horizontal" align="left" class="ui-btn-left ui-header"> 
+            <a  data-rel="back" data-icon="arrow-l" rel="external" data-ajax="false">返回</a>
+            
+   		</div>                                           
+                <h1>景点列表</h1>
+                <a href="index.html" id="home" data-icon="home" class="ui-btn-right" rel="external" data-ajax="false">首页</a>
+				
+
+</div>
+
+<div class="sli_mobile_header">
+		<form id="search" action="SearchServlet" method="post" class="search" data-ajax="false" onsubmit="return search_list()">
+        <table cellpadding='0' cellspacing='0' style="width: 100%; margin-bottom:0px; ">
+          <tr class="search_bg" >
+           <td  style="width: 96%;">
+           <input id="keyword" type="search" name="keyword" placeholder="输入景点名称搜索" class="ui-body-c"  />
+           <!--<input name="page" value="1" type="hidden" />
+                        </td>
+              <td  style="width: 4%; text-align: left;">
+                  &lt;!&ndash;<input id="bntSearch" type="submit" value="Go" data-theme="a"  rel="external"/>&ndash;&gt;
+                  <img id="submit_buttom" src="css/images/search.png" alt="">-->
+                        </td>
+                      </tr>
+                    </table>       
+         </form>
+     </div>
+
+	<ul data-role="listview" data-inset="true" id="search_view_list" class="catagory_con">
+			
+                <li><a href="javascript:goTo('zhengting.html')" data-back="flase" rel="external" >正厅</a></li>
+                <li><a href="javascript:goTo('zhongting.html')" data-back="flase" rel="external">中厅</a></li>
+                <li><a href="javascript:goTo('dongting.html')" data-back="flase" rel="external">东厅</a></li>
+				<li><a href="javascript:goTo('xiting.html')" data-back="flase" rel="external">西厅</a></li>
+				<li><a href="javascript:goTo('jxt.html')" data-back="flase" rel="external">聚贤堂</a></li>
+				<li><a href="javascript:goTo('hdz.html')" data-back="flase" rel="external" >后东斋</a></li>
+                <li><a href="javascript:goTo('hdx.html')" data-back="flase" rel="external">后东厢</a></li>
+                <li><a href="javascript:goTo('qdx.html')" data-back="flase" rel="external">前东厢</a></li>
+
+
+                <li><a href="javascript:goTo('qxz.html')" data-back="flase" rel="external" >前西斋</a></li>
+                <li><a href="javascript:goTo('qxx.html')" data-back="flase" rel="external">前西厢</a></li>
+                <!--<li><a href="javascript:goTo('zxx.html')" data-back="flase" rel="external">中西厢</a></li>-->
+				<li><a href="javascript:goTo('hxx.html')" data-back="flase" rel="external">后西厢</a></li>
+				<!--<li><a href="javascript:goTo('zdx.html')" data-back="flase" rel="external">中东厢</a></li>-->
+				<li><a href="javascript:goTo('qdz.html')" data-back="flase" rel="external" >前东斋</a></li>
+                <li><a href="javascript:goTo('hxz.html')" data-back="flase" rel="external">后西斋</a></li>
+
+     <!--   <li><a href="zhengting.html" data-back="flase" rel="external">正厅</a></li>
+        <li><a href="zhongting.html" data-back="flase" rel="external">中厅</a></li>
+        <li><a href="dongting.html" data-back="flase" rel="external">东厅</a></li>
+        <li><a href="xiting.html" data-back="flase" rel="external">西厅</a></li>
+        <li><a href="jxt.html" data-back="flase" rel="external">聚贤堂</a></li>
+        <li><a href="hdz.html" data-back="flase" rel="external">后东斋</a></li>
+        <li><a href="hdx.html" data-back="flase" rel="external">后东厢</a></li>
+        <li><a href="qdx.html" data-back="flase" rel="external">前东厢</a></li>
+
+        <li><a href="zhengting.html" data-back="flase" rel="external">正厅</a></li>
+        <li><a href="zhongting.html" data-back="flase" rel="external">中厅</a></li>
+        <li><a href="dongting.html" data-back="flase" rel="external">东厅</a></li>
+        <li><a href="xiting.html" data-back="flase" rel="external">西厅</a></li>
+        <li><a href="jxt.html" data-back="flase" rel="external">聚贤堂</a></li>
+        <li><a href="hdz.html" data-back="flase" rel="external">后东斋</a></li>
+        <li><a href="hdx.html" data-back="flase" rel="external">后东厢</a></li>
+        <li><a href="qdx.html" data-back="flase" rel="external">前东厢</a></li>-->
+
+    </ul>
+
+</div><!-- /page -->
+
+</body>
+</html>

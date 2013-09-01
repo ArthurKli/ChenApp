@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>陈家祠</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"  href="css/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet"  href="css/jqm-icon-pack-1.1.1-original.css" />
+	<link rel="stylesheet"  href="css/view.css" />
+	<script type="text/javascript"  src="js/cordova-2.7.0.js"></script>
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script src="js/global.js"></script>
+	
+	
+</head> 
+<body>
+<div data-role="page" >	
+    <script type="text/javascript"  src="js/view.js"></script>
+    <div id="show_music_handle">
+        <img   src="css/images/player_bg_s.png" width="100%" />
+    </div>
+
+    <div id="show_music_player">
+        　 <img id="show_music_body1"  src="css/images/music_play.png" width="100%" />
+        <img id="show_music_body2"  src="css/images/music_pause.png" width="100%" />
+        <div id="show_music_player_click"></div>
+        <div id="hide_music_player"></div>
+    </div>
+    <div id="dis_overlay"></div>
+	<div data-role="header" data-theme="a" data-position="fixed">
+		<div data-type="horizontal" align="left" class="ui-btn-left ui-header"> 
+            <a href="javascript: history.go(-1)" data-icon="arrow-l" rel="external" data-ajax="false">返回</a>
+            
+   		</div>                                           
+                <h1>聚贤堂</h1>
+                <a href="index.html" id="home" data-icon="home" class="ui-btn-right" rel="external" data-ajax="false">首页</a>
+</div>
+<!--    <div> <span class="slider_text">已经参观过这个景点了？</span>
+         <span class="slider_div">
+        <select name="slider" id="slider" data-role="slider" data-mini="true">
+            <option value="off" id="slider_off">木有</option>
+            <option value="on" id="slider_on">是的</option>
+        </select>
+             </span>
+    </div>-->
+    <img src="css/images/eave.png" width="100%" />
+    <div data-role="content" class="info_content">
+        <div  id="view_content_top" class="view_top_outer">
+            <div class="view_top_inner">
+                <img class="view_content view_content_main_image"   src="image/jxt.jpg" width="100%"/>
+                <input id="tips_info" class="infos" type="hidden" value="jxt">
+
+            </div>
+        </div>
+        <br />
+        <div class="view_mid_div view_content">
+            <span class="view_mid_div_zhanpin">建筑七绝</span>
+            <span id="view_mid_div_more"><a href="javascript:viewList();">更多>></a></span>
+        </div>
+        <div class="view_mid_list" id="listObj"  align="center">
+            <div class="div_apps"><a href="javascript:goTo('disView_jxt.html?id=1')" rel="external" data-back="flase"><span>卸甲封王</span></a>
+            </div>
+            <div class="div_apps"><a href="javascript:goTo('disView_jxt.html?id=2')" rel="external" data-back="flase"><span>花开富贵</span></a>
+            </div>
+            <div class="div_apps"><a href="javascript:goTo('disView_jxt.html?id=3')" rel="external" data-back="flase"><span>麒麟送子</span></a>
+            </div>
+            <div class="div_apps"><a href="javascript:goTo('disView_jxt.html?id=4')" rel="external" data-back="flase"><span>福寿双全</span></a></div>
+        </div>
+    <div class="view_content view_content_tip" id="view_content_tip">
+        聚贤堂
+    </div>
+    <div class="view_content view_content_letter">
+        聚贤堂原是陈姓族人举行春秋祭祀和议事聚会的地方。面宽五间27.84米、进深三间16.7米，二十一架梁六柱出前后廊，梁架、驼峰、斗拱、雀替雕刻花纹，后外金柱明间、次间装12扇镂雕屏风，稍间设花罩；堂前设月台，月台宽16.84米、深5.76米，石雕塑柱头以岭南佳果为装饰，栏板嵌铁花。聚贤堂上的陶塑脊饰在1975年被台风摧毁，1980年陈氏书院进行维修，聘请佛山石湾老艺人按原样重新烧制此条脊饰，因此釉的色彩还原和表现手法略有不同。
+    </div>
+
+
+
+
+</div> 
+
+
+
+
+</div><!-- /page -->
+
+</body>
+</html>

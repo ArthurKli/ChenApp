@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>陈家祠</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"  href="css/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet"  href="css/jqm-icon-pack-1.1.1-original.css" />
+	<link rel="stylesheet"  href="css/view.css" />
+    <script type="text/javascript"  src="js/cordova-2.7.0.js"></script>
+	<script src="js/jquery-1.7.1.min.js"></script>
+
+	<script src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script src="js/global.js"></script>
+
+</head> 
+<body>
+<div data-role="page" >
+    <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/klass.min.js"></script>
+    <script type="text/javascript" src="js/code.photoswipe-3.0.5.min.js"></script>
+
+
+    <script type="text/javascript">
+        var photoObj =[
+            { url: serverURL+'image/full/qdx_001.jpg', caption: '滕王阁序'}
+        ];
+
+    </script>
+	<div data-role="header" data-theme="a" data-position="fixed">
+		<div data-type="horizontal" align="left" class="ui-btn-left ui-header">
+            <a href="javascript: history.go(-1)" data-icon="arrow-l" rel="external" data-ajax="false">返回</a>
+            
+   		</div>                                           
+                <h1>图片展示</h1>
+                <a href="index.html" id="home" data-icon="home" class="ui-btn-right" rel="external" data-ajax="false">首页</a>
+				
+
+</div>
+    <div id='display_load_image'><img id="display_load_image_in" src='css/images/loading.png' alt='loading...' /></div>
+    <div id="MainContent">
+
+        <div id="PhotoSwipeTarget"></div>
+        <div id="Indicators">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+
+    </div>
+
+    <div id="Footer">
+        <div class="display_view_ins" id="display_view_ins_1">
+            <div class="display_view_ins_title">滕王阁序</div>
+            <small>陈氏书院东厢房里的这幅彩绘图画描绘了才华横溢的唐代才子王勃在江南三大名楼之首的腾王阁上即席挥毫，写下了千古佳作《腾王阁序》的情景。</small>
+        </div>
+
+    </div>
+
+
+</div><!-- /page -->
+<script type="text/javascript" src="js/display.js"></script>
+</body>
+</html>

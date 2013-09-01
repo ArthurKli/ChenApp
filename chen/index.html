@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>自定义地图类型</title>
+    <script type="text/javascript" charset="utf-8" src="js/cordova-2.7.0.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1.5 user-scalable=yes">-->
+
+    <link rel="stylesheet"  href="css/jquery.mobile-1.2.0.min.css" />
+
+    <link rel="stylesheet" href="css/view.css" type="text/css" />
+    <link rel="stylesheet" href="css/position3.css" type="text/css" />
+    <link rel="stylesheet"  href="css/jqm-icon-pack-1.1.1-original.css" />
+    <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).bind("mobileinit", function()
+        {
+            $.support.cors = true;
+            $.mobile.allowCrossDomainPages=true;
+
+            if (navigator.userAgent.indexOf("Android") != -1)
+            {
+                $.mobile.defaultPageTransition = 'none';
+                $.mobile.defaultDialogTransition = 'none';
+            }
+        });
+    </script>
+
+</head>
+<body id="mybody">
+<div data-role="page" id="indexPage">
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <script type="text/javascript" src="js/jquery.hammer.min.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/setStyle.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+
+<div id="wrapper">
+<div class="full" id="scroller">
+
+   <div id="tip1" class="tipsList" ><div class="subTipsList" id="tip1_sub"><img id="playMusic_1" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_1" class="tips_sub_txt">&nbsp;首进正厅&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_1" class="infos" type="hidden" value="zhengting"></div>
+   <div id="tip2" class="tipsList" ><div class="subTipsList" id="tip2_sub"><img id="playMusic_2" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_2" class="tips_sub_txt">&nbsp;首进西厅&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_2" class="infos" type="hidden" value="xiting"></div>
+   <div id="tip3" class="tipsList" ><div class="subTipsList" id="tip3_sub"><img id="playMusic_3" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_3" class="tips_sub_txt">&nbsp;中进西厅&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_3" class="infos" type="hidden" value="xiting"></div>
+   <div id="tip4" class="tipsList" ><div class="subTipsList" id="tip4_sub"><img id="playMusic_4" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_4" class="tips_sub_txt"> 中进聚贤堂 <img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_4" class="infos" type="hidden" value="jxt"></div>
+   <div id="tip5" class="tipsList" ><div class="subTipsList" id="tip5_sub"><img id="playMusic_5" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_5" class="tips_sub_txt">&nbsp;后进西厅&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_5" class="infos" type="hidden" value="xiting"></div>
+   <div id="tip6" class="tipsList" ><div class="subTipsList" id="tip6_sub"><img id="playMusic_6" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_6" class="tips_sub_txt">&nbsp;后进中厅&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_6" class="infos" type="hidden" value="zhongting"></div>
+   <div id="tip7" class="tipsList" ><div class="subTipsList" id="tip7_sub"><img id="playMusic_7" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_7" class="tips_sub_txt">&nbsp;后东斋&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_7" class="infos" type="hidden" value="hdz"></div>
+   <div id="tip8" class="tipsList" ><div class="subTipsList" id="tip8_sub"><img id="playMusic_8" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_8" class="tips_sub_txt">&nbsp;后东厢&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_8" class="infos" type="hidden" value="hdx"></div>
+   <div id="tip9" class="tipsList" ><div class="subTipsList" id="tip9_sub"><img id="playMusic_9" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_9" class="tips_sub_txt">&nbsp;中进东厅&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_9" class="infos" type="hidden" value="dongting"></div>
+   <div id="tip10" class="tipsList" ><div class="subTipsList" id="tip10_sub"><img id="playMusic_10" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_10" class="tips_sub_txt">&nbsp;前东厢&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_10" class="infos" type="hidden" value="qdx"></div>
+   <div id="tip11" class="tipsList" ><div class="subTipsList" id="tip11_sub"><img id="playMusic_11" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_11" class="tips_sub_txt">&nbsp;月台&nbsp;&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_11" class="infos" type="hidden" value="yuetai"></div>
+
+
+
+
+   <div id="tip12" class="tipsList" ><div class="subTipsList" id="tip12_sub"><img id="playMusic_12" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_12" class="tips_sub_txt">&nbsp;首进东厅&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_12" class="infos" type="hidden" value="dongting"></div>
+   <div id="tip13" class="tipsList" ><div class="subTipsList" id="tip13_sub"><img id="playMusic_13" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_13" class="tips_sub_txt">&nbsp;后进东厅&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_13" class="infos" type="hidden" value="dongting"></div>
+   <div id="tip14" class="tipsList" ><div class="subTipsList" id="tip14_sub"><img id="playMusic_14" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_14" class="tips_sub_txt">&nbsp;前西斋&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_14" class="infos" type="hidden" value="qxz"></div>
+   <div id="tip15" class="tipsList" ><div class="subTipsList" id="tip15_sub"><img id="playMusic_15" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_15" class="tips_sub_txt">&nbsp;前西厢&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_15" class="infos" type="hidden" value="qxx"></div>
+   <div id="tip16" class="tipsList" ><div class="subTipsList" id="tip16_sub"><img id="playMusic_16" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_16" class="tips_sub_txt">&nbsp;中西厢&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_16" class="infos" type="hidden" value="zxx"></div>
+   <div id="tip17" class="tipsList" ><div class="subTipsList" id="tip17_sub"><img id="playMusic_17" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_17" class="tips_sub_txt">&nbsp;后西厢&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_17" class="infos" type="hidden" value="hxx"></div>
+   <div id="tip18" class="tipsList" ><div class="subTipsList" id="tip18_sub"><img id="playMusic_18" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_18" class="tips_sub_txt">&nbsp;中东厢&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_18" class="infos" type="hidden" value="zdx"></div>
+   <div id="tip19" class="tipsList" ><div class="subTipsList" id="tip19_sub"><img id="playMusic_19" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_19" class="tips_sub_txt">&nbsp;前东斋&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_19" class="infos" type="hidden" value="qdz"></div>
+   <div id="tip20" class="tipsList" ><div class="subTipsList" id="tip20_sub"><img id="playMusic_20" class="playMedia" src="css/images/icon/sound.png"  width="28px"/> <span id="tips_sub_txt_20" class="tips_sub_txt">&nbsp;后西斋&nbsp;<img  class="displayInfo" src="css/images/icon/display.png"  width="28px"/></span></div><input id="tips_info_20" class="infos" type="hidden" value="hxz"></div>
+
+    <img id="fullImg" src="main_bg.jpg" width="100%" height="100%"/>
+</div></div>
+
+    <div class="index_shell">
+    <div id="index_shell_div">
+        <!--<a href='#'>请教高手帮我看下这段代码</a><a href='#'>asdddddddddddd</a><a href='#'>lfk了付款了凡客</a>-->
+
+    </div>
+    <div>
+<div id="show_music_player_index">
+    　 <img id="show_music_body1_index"  src="css/images/music_play.jpg" width="100%" />
+       <img id="show_music_body2_index"  src="css/images/music_pause.jpg" width="100%" />
+      <img id="show_music_line_index" src="css/images/music_line.jpg" width="100%" />
+    <div id="show_music_player_click_index"></div>
+</div>
+
+
+
+<!--<audio id='tianmen'>
+    <source src='audio/tianm.mp3' type='audio/mpeg'>
+    <source src='audio/tianm.ogg' type='audio/mpeg'>
+    <source src='audio/tianm.wav' type='audio/mpeg'>
+    Your browser does not support the audio element.
+</audio>
+<audio id='taihe'>
+    <source src='audio/taihe.mp3' type='audio/mpeg'>
+    <source src='audio/taihe.ogg' type='audio/mpeg'>
+    <source src='audio/taihe.wav' type='audio/mpeg'>
+    Your browser does not support the audio element.
+</audio>-->
+
+<div id="menu" class="menu_body" >
+    <img class="menu_image" src="css/images/menus.png" width="100%" />
+    <img class="menu_image" style="display: none" src="css/images/menus2.png" width="100%" />
+</div>
+<!--<div id="music" class="menu_body" ><img src="css/images/music.png" width="100%" /></div>-->
+<div id="photo" class="menu_body" >
+    <img class="photo_image" src="css/images/photo.png" width="100%" />
+    <img class="photo_image" src="css/images/photo2.png" width="100%" style="display: none"/>
+</div>
+<!--<div id="gps" class="menu_body" ><img src="css/images/gps.png" width="100%" /></div>-->
+
+<div id="setSize" >
+    <span id="smaller" class="menu_body" >
+        <img class="smaller_image" src="css/images/setSmall.png" width="40%"/>
+        <img class="smaller_image" src="css/images/setSmall2.png" width="40%" style="display: none"/>
+    </span>
+    <span id="bigger" class="menu_body" >
+        <img class="big_image" src="css/images/setBig.png" width="40%"/>
+        <img class="big_image" src="css/images/setBig2.png" width="40%" style="display: none"/>
+    </span>
+
+</div>
+
+
+
+<div id="white_content" class="white_content" >
+    <!--<input type="button" value="关闭" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'" />-->
+
+    <div class="sublist">
+        <div id="gaik"><img src="css/images/viewinfo.png" />景区概况</div>
+        <!--<div id="traffic"><img src="css/images/traffic.png" />交通信息</div>-->
+        <div id="viewList"><img src="css/images/viewlist.png" />景点列表</div>
+        <div id="sina"><img src="css/images/sina.png" />微博分享</div>
+        <!--<div onclick="capturePhoto()">publish</div>-->
+        <div id="help"><img src="css/images/help.png" />参观须知</div>
+        <div id="popular"><img src="css/images/popular.png" />民间百艺</div>
+        <div id="master"><img src="css/images/master.png" />工艺大师</div>
+        <div id="reset"><img src="css/images/reset.png" />重选路线</div>
+    </div>
+</div>
+<div id="black_overlay" class="black_overlay" style="display: none">
+</div>
+
+  <div id="black_overlay_init"  >
+</div>
+<div id="black_overlay_init_go"  >
+    <div id="black_overlay_init_go_inner">
+    <div id="black_overlay_init_go_text">
+    请选择路线：
+    </div>
+
+    <div id="black_overlay_init_go_img">
+        <img src="css/images/go.png" width="100%">
+    </div>
+    </div>
+   <!--<div></div>-->
+      <div id="change_line_img_1" class="change_line_img">
+          <div>
+          <img class="half_hour"  src="css/images/half_green.png" width="100%"/> </div><div>
+          <img class="one_hour" src="css/images/hour_gary.png" width="100%" />    </div> <div class="change_line_img_onemore">
+          <img class="one_hour_plus" src="css/images/onemore_gary.png"  width="100%"/>    </div>
+      </div>
+    <div id="change_line_img_2" class="change_line_img"> <div>
+        <img class="half_hour"  src="css/images/half_gary.png" width="100%"/> </div><div>
+        <img class="one_hour" src="css/images/hour_green.png"  width="100%"/> </div><div class="change_line_img_onemore">
+        <img class="one_hour_plus" src="css/images/onemore_gary.png" width="100%" />    </div>
+    </div>
+    <div id="change_line_img_3" class="change_line_img"> <div>
+        <img class="half_hour"  src="css/images/half_gary.png" width="100%"/></div><div>
+        <img class="one_hour" src="css/images/hour_gary.png" width="100%" /> </div><div class="change_line_img_onemore">
+        <img class="one_hour_plus" src="css/images/onemore_green.png" width="100%" /> </div>
+    </div>
+</div>
+
+<div id="index_black_jia"><img src="css/images/black_jia.png"  /></div>
+
+<div id="index_display_bar">更多</div>
+    <div id="index_display_img0" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/index_display_03.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img1" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/zhengting_001.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/zhengting_002.png" width="50px" /></div>
+        <div class="index_display_down"><img   src="image/disCircle/zhengting_003.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/zhengting_004.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img2" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/xiting_001.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/xiting_002.png" width="50px" /></div>
+        <div class="index_display_down"><img  src="image/disCircle/xiting_003.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/xiting_004.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img3" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/xiting_001.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/xiting_002.png" width="50px" /></div>
+        <div class="index_display_down"><img  src="image/disCircle/xiting_003.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/xiting_004.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img4" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/jxt_001.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/jxt_002.png" width="50px" /></div>
+        <div class="index_display_down"><img  src="image/disCircle/jxt_003.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/jxt_004.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img5" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/xiting_001.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/xiting_002.png" width="50px" /></div>
+        <div class="index_display_down"><img  src="image/disCircle/xiting_003.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/xiting_004.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img6" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/index_display_03.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img7" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/index_display_03.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img8" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/index_display_03.png" width="50px" /></div>
+    </div>
+
+    <div id="index_display_img9" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/dongting_001.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/dongting_002.png" width="50px" /></div>
+        <div class="index_display_down"><img  src="image/disCircle/dongting_003.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/dongting_004.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img10" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/qdx_001.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img11" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/yuetai_001.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/yuetai_002.png" width="50px" /></div>
+        <div class="index_display_down"><img  src="image/disCircle/yuetai_003.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/yuetai_004.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img12" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/dongting_001.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/dongting_002.png" width="50px" /></div>
+        <div class="index_display_down"><img  src="image/disCircle/dongting_003.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/dongting_004.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img13" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/dongting_001.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/dongting_002.png" width="50px" /></div>
+        <div class="index_display_down"><img  src="image/disCircle/dongting_003.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/dongting_004.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img14" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/index_display_03.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img15" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/qxx_001.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img16" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/index_display_03.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img17" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/index_display_03.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img18" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/index_display_03.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img19" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/index_display_03.png" width="50px" /></div>
+    </div>
+    <div id="index_display_img20" class="index_display">
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_down"><img  src="image/disCircle/index_display_03.png" width="50px" /></div>
+        <div class="index_display_up"><img   src="image/disCircle/index_display_03.png" width="50px" /></div>
+    </div>
+
+<script type="text/javascript">
+
+    var hammertime = $(".full").hammer();
+//    console.log(hammertime);
+
+    hammertime.on("pinch","#fullImg", function(ev) {
+        if(window.console) { console.log(ev); }
+        ev.stopPropagation();
+        ev.preventDefault();
+    });
+    // the whole area
+    hammertime.on("pinchin","#fullImg", function(ev) {
+        if(window.console) { console.log(ev); }
+        ev.stopPropagation();
+//        alert("inin")
+        changeSizeSmall(10);
+//        ev.gesture.preventDefault();
+
+
+
+    });
+
+
+    hammertime.on("pinchout","#fullImg", function(ev) {
+        if(window.console) { console.log(ev); }
+//        alert("big");
+        changeSizeBig(10);
+//        ev.stopPropagation();
+    });
+
+</script>
+
+  <input type="hidden" value="yes" id="out_of_frame" name="out_of_frame" />
+</div>
+</body>
+</html>

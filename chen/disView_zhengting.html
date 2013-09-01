@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>陈家祠</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"  href="css/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet"  href="css/jqm-icon-pack-1.1.1-original.css" />
+	<link rel="stylesheet"  href="css/view.css" />
+    <script type="text/javascript"  src="js/cordova-2.7.0.js"></script>
+	<script src="js/jquery-1.7.1.min.js"></script>
+
+	<script src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/view.js"></script>
+
+</head> 
+<body>
+<div data-role="page" >
+    <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/klass.min.js"></script>
+    <script type="text/javascript" src="js/code.photoswipe-3.0.5.min.js"></script>
+
+
+
+    <script type="text/javascript">
+        var photoObj =[
+            { url: serverURL+'image/full/zhengting_001.jpg', caption: '匾额'},
+            { url: serverURL+'image/full/zhengting_002.jpg', caption: '门神'},
+            { url: serverURL+'image/full/zhengting_003.jpg', caption: '木雕屏门'},
+            { url: serverURL+'image/full/zhengting_004.jpg', caption: '铜铺首'}
+        ];
+
+    </script>
+	<div data-role="header" data-theme="a" data-position="fixed">
+		<div data-type="horizontal" align="left" class="ui-btn-left ui-header">
+            <a href="javascript: history.go(-1)" data-icon="arrow-l" rel="external" data-ajax="false">返回</a>
+            
+   		</div>                                           
+                <h1>图片展示</h1>
+                <a href="index.html" id="home" data-icon="home" class="ui-btn-right" rel="external" data-ajax="false">首页</a>
+				
+
+</div>
+    <div id='display_load_image'><img id="display_load_image_in" src='css/images/loading.png' alt='loading...' /></div>
+    <div id="MainContent">
+
+        <div id="PhotoSwipeTarget"></div>
+        <div id="Indicators">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+
+    </div>
+
+    <div id="Footer">
+        <div class="display_view_ins" id="display_view_ins_1">
+            <div class="display_view_ins_title">匾额</div>
+            <small>
+             在书院正门门额上，巨幅横匾上写着“陈氏书院”四个醒目的大字，这就是建筑本身的名称，但是民间却习惯称它为“陈家祠”。为什么要把“祠堂”称作“书院”呢？原因是：清代的广东官府，担心广东各地宗族集中在广州城里兴建祠堂，利用合族宗祠来联系和笼络本族成员，加强宗族势力，甚至聚众闹事与官府抗衡，所以官府严禁在广州城内建造合族祠堂。为避开官府的禁令，于是各姓氏的祠堂皆改称书院或书室，而陈氏书院实际上是一座以书院为名的合族祠堂。
+            </small>
+        </div>
+        <div class="display_view_ins" id="display_view_ins_2">
+            <div class="display_view_ins_title">门神</div>
+            <small>
+                陈氏书院首进的两扇大木门，高5.61米，宽4.1米，厚0.13米，是广东现存完好的最大的清代木门。门上有一对4米高彩绘的大门神，红脸者叫秦琼，黑脸者叫尉（yù）迟恭，两人身穿盔甲，手持兵器，怒目圆睁，英气逼人。大将军变成了驱鬼镇邪的门神，这里民间还流传着一个故事。传说唐朝李世民刚当上皇帝不久，患了重病，梦见鬼魅前来索命，弄得李世民提心吊胆无法入睡。于是秦琼与尉迟恭两位将军身穿盔甲、手执兵器守护在寝宫前，果然鬼魅畏惧，不敢骚扰，皇帝病情逐渐好转，于是他命令宫廷画师把秦琼与尉迟恭两位将军的威武形象画在寝宫门上驱魔镇邪，这个办法十分奏效，从此宫内太平。后来此事传到民间，平民百姓纷纷仿效也把两位将军的画像贴在自家的门上，以保平安。从此，秦琼和尉迟恭的画像就成了民间最常见的门神了。民间贴门神有左右之分，不能贴错，如果“贴错门神”，两位将军背靠背互不理睬，妖魔鬼怪就会乘虚而入了。
+            </small>
+        </div>
+        <div class="display_view_ins" id="display_view_ins_3">
+            <div class="display_view_ins_title">木雕屏门</div>
+            <small>
+                首进大厅的四扇屏门挡中，设在大厅正中，分隔内外空间，透过镂空雕花，院内景物若隐若现，给人虚实相结合的感觉。这四扇屏门挡中，从上到下都雕刻着吉祥如意的内容：“金殿赏赐”、“金殿比武”、 “孟浩然踏雪寻梅”、“渔舟唱晚”、“渔樵耕读”、等，大多含有很美妙的寓意。如裙板上雕刻的一幅“创大业，儿孙永发”图，用果实累累的芭蕉树的大叶象征鸿图大业，用母鸡带一群小鸡寓意儿孙永发，比喻十分贴切。双面镂雕技法和构图布设巧妙，充分表现出广东木雕的特点。
+            </small></div>
+        <div class="display_view_ins" id="display_view_ins_4">
+            <div class="display_view_ins_title">铜铺首</div>
+            <small>
+                陈氏书院大门的中间镶有一对铜铺首，直径达60厘米，重60公斤。相传这对铺首的形象取自龙的第六子，名椒图，因为它“好固，故立于门环之上”，以镇家宅。铜铺首离地面有2米多高，说明它已经失去了原有的用于扣门的功能，成为了纯粹的装饰物。造型凶猛的铺首和形态威武的门神装饰在正门之上，使这座宗族祠堂产生一种令人肃穆的庄严气氛。
+            </small></div>
+    </div>
+
+
+</div><!-- /page -->
+<script type="text/javascript" src="js/display.js"></script>
+</body>
+</html>

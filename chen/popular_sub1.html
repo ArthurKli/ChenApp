@@ -1,0 +1,385 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>陈家祠</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  href="css/jquery.mobile-1.2.0.min.css" />
+    <link rel="stylesheet"  href="css/jqm-icon-pack-1.1.1-original.css" />
+    <link rel="stylesheet"  href="css/view.css" />
+    <script type="text/javascript"  src="js/cordova-2.7.0.js"></script>
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).bind("mobileinit", function()
+        {
+            if (navigator.userAgent.indexOf("Android") != -1)
+            {
+                $.mobile.defaultPageTransition = 'none';
+                $.mobile.defaultDialogTransition = 'none';
+            }
+        });
+    </script>
+    <script src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/view.js"></script>
+
+</head>
+<body class="disList_body">
+<div data-role="page" class="disList_body">
+    <div data-role="header" data-theme="a" data-position="fixed">
+        <div data-type="horizontal" align="left" class="ui-btn-left ui-header">
+            <a href="javascript: history.go(-1)" data-icon="arrow-l" rel="external" data-ajax="false">返回</a>
+
+        </div>
+        <h1>陈氏书院建筑七绝</h1>
+        <a href="index.html" id="home" data-icon="home" class="ui-btn-right" rel="external" data-ajax="false">首页</a>
+
+
+    </div>
+
+    <div id="default_view_list">
+        <div class="dis_list_tip">灰塑</div>
+        <ul data-role="listview" data-inset="true" class="catagory_con"><!-- data-inset="true"圆角-->
+            <li><a href="javascript:goTo('sub1/hs_001.html')" rel="external" data-back="flase">
+                <img  src="image/seven/hs_001.jpg" />
+                <h3>福在眼前</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/hs_002.html')" rel="external" data-back="flase">
+                <img src="image/seven/hs_002.jpg" />
+                <h3>路路顺利</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/hs_003.html')" rel="external" data-back="flase">
+                <img src="image/seven/hs_003.jpg" />
+                <h3>麒麟会狮</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/hs_004.html')" rel="external" data-back="flase">
+                <img src="image/seven/hs_004.jpg" />
+                <h3>群仙祝寿/创大业</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/hs_005.html')" rel="external" data-back="flase">
+                <img src="image/seven/hs_005.jpg" />
+                <h3>室上大吉</h3>
+            </a>
+            </li>
+
+            <li><a href="javascript:goTo('sub1/hs_006.html')" rel="external" data-back="flase">
+                <img src="image/seven/hs_006.jpg" />
+                <h3>福禄寿</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/hs_007.html')" rel="external" data-back="flase">
+                <img src="image/seven/hs_007.jpg" />
+                <h3>福运临门</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/hs_008.html')" rel="external" data-back="flase">
+                <img src="image/seven/hs_008.jpg" />
+                <h3>福上加福</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/hs_009.html')" rel="external" data-back="flase">
+                <img src="image/seven/hs_009.jpg" />
+                <h3>福禄康宁</h3>
+            </a>
+            </li>
+        </ul>
+        <div class="dis_list_tip">木雕</div>
+        <ul data-role="listview" data-inset="true" class="catagory_con"><!-- data-inset="true"圆角-->
+            <li><a href="javascript:goTo('sub1/md_001.html')" rel="external" data-back="flase">
+                <img  src="image/seven/md_001.jpg" />
+                <h3>曹操大宴铜雀台</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/md_002.html')" rel="external" data-back="flase">
+                <img src="image/seven/md_002.jpg" />
+                <h3>践土会盟</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/md_003.html')" rel="external" data-back="flase">
+                <img src="image/seven/md_003.jpg" />
+                <h3>薛丁山受封</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/md_004.html')" rel="external" data-back="flase">
+                <img src="image/seven/md_004.jpg" />
+                <h3>程咬金贺寿</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/md_005.html')" rel="external" data-back="flase">
+                <img src="image/seven/md_005.jpg" />
+                <h3>赵美容打飞熊</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/md_006.html')" rel="external" data-back="flase">
+                <img src="image/seven/md_006.jpg" />
+                <h3>西王母祝寿</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/md_007.html')" rel="external" data-back="flase">
+                <img src="image/seven/md_007.jpg" />
+                <h3>雷神、张仙</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/md_008.html')" rel="external" data-back="flase">
+                <img src="image/seven/md_008.jpg" />
+                <h3>鹊桥会</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/md_009.html')" rel="external" data-back="flase">
+                <img src="image/seven/md_009.jpg" />
+                <h3>摘星楼胶鬲死节</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/md_010.html')" rel="external" data-back="flase">
+                <img src="image/seven/md_010.jpg" />
+                <h3>群仙贺寿</h3>
+            </a>
+            </li>
+        </ul>
+        <div class="dis_list_tip">石雕</div>
+        <ul data-role="listview" data-inset="true" class="catagory_con"><!-- data-inset="true"圆角-->
+            <li><a href="javascript:goTo('sub1/ts_001.html')" rel="external" data-back="flase">
+                <img  src="image/seven/ts_001.jpg" />
+                <h3>石狮</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/ts_002.html')" rel="external" data-back="flase">
+                <img  src="image/seven/ts_002.jpg" />
+                <h3>太狮少狮</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/ts_003.html')" rel="external" data-back="flase">
+                <img  src="image/seven/ts_003.jpg" />
+                <h3>狮子滚绣球</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/ts_004.html')" rel="external" data-back="flase">
+                <img  src="image/seven/ts_004.jpg" />
+                <h3>日神、月神</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/ts_005.html')" rel="external" data-back="flase">
+                <img  src="image/seven/ts_005.jpg" />
+                <h3>八仙</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/ts_006.html')" rel="external" data-back="flase">
+                <img  src="image/seven/ts_006.jpg" />
+                <h3>暗八仙</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/ts_007.html')" rel="external" data-back="flase">
+                <img  src="image/seven/ts_007.jpg" />
+                <h3>喜上枝头、喜上眉梢</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/ts_008.html')" rel="external" data-back="flase">
+                <img  src="image/seven/ts_008.jpg" />
+                <h3>子孙兴旺</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/ts_009.html')" rel="external" data-back="flase">
+                <img  src="image/seven/ts_009.jpg" />
+                <h3>蟾宫折桂</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/ts_010.html')" rel="external" data-back="flase">
+                <img  src="image/seven/ts_010.jpg" />
+                <h3>木棉花开</h3>
+            </a>
+            </li>
+        </ul>
+
+        <div class="dis_list_tip">彩绘</div>
+        <ul data-role="listview" data-inset="true" class="catagory_con"><!-- data-inset="true"圆角-->
+            <li><a href="javascript:goTo('sub1/ch_003.html')" rel="external" data-back="flase">
+                <img  src="image/seven/ch_003.jpg" />
+                <h3>门神</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/ch_001.html')" rel="external" data-back="flase">
+                <img  src="image/seven/ch_001.jpg" />
+                <h3>滕王阁序</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/ch_002.html')" rel="external" data-back="flase">
+                <img src="image/seven/ch_002.jpg" />
+                <h3>夜宴桃李园</h3>
+            </a>
+            </li>
+        </ul>
+
+        <div class="dis_list_tip">陶塑</div>
+        <ul data-role="listview" data-inset="true" class="catagory_con"><!-- data-inset="true"圆角-->
+            <li><a href="javascript:goTo('sub1/tao_001.html')" rel="external" data-back="flase">
+                <img  src="image/seven/tao_001.jpg" />
+                <h3>龙戏珠</h3>
+            </a>
+            </li>
+
+            <li><a href="javascript:goTo('sub1/tao_002.html')" rel="external" data-back="flase">
+                <img  src="image/seven/tao_002.jpg" />
+                <h3>榴开百子</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/tao_003.html')" rel="external" data-back="flase">
+                <img  src="image/seven/tao_003.jpg" />
+                <h3>四季平安</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/tao_004.html')" rel="external" data-back="flase">
+                <img  src="image/seven/tao_004.jpg" />
+                <h3>凤凰牡丹</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/tao_005.html')" rel="external" data-back="flase">
+                <img  src="image/seven/tao_005.jpg" />
+                <h3>六郎罪子</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/tao_006.html')" rel="external" data-back="flase">
+                <img  src="image/seven/tao_006.jpg" />
+                <h3>四郎探母</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/tao_007.html')" rel="external" data-back="flase">
+                <img  src="image/seven/tao_007.jpg" />
+                <h3>书字换鹅</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/tao_008.html')" rel="external" data-back="flase">
+                <img  src="image/seven/tao_008.jpg" />
+                <h3>商山四皓</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/tao_009.html')" rel="external" data-back="flase">
+                <img  src="image/seven/tao_009.jpg" />
+                <h3>刘备过江招亲</h3>
+            </a>
+            </li>
+
+
+        </ul>
+
+        <div class="dis_list_tip">铜铁铸</div>
+        <ul data-role="listview" data-inset="true" class="catagory_con"><!-- data-inset="true"圆角-->
+            <li><a href="javascript:goTo('sub1/tong_001.html')" rel="external" data-back="flase">
+                <img  src="image/seven/tong_001.jpg" />
+                <h3>铜铺首</h3>
+            </a>
+            </li>
+
+            <li><a href="javascript:goTo('sub1/tong_002.html')" rel="external" data-back="flase">
+                <img  src="image/seven/tong_002.jpg" />
+                <h3>麒麟玉书凤凰图</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/tong_003.html')" rel="external" data-back="flase">
+                <img  src="image/seven/tong_003.jpg" />
+                <h3>三阳开泰</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/tong_004.html')" rel="external" data-back="flase">
+                <img  src="image/seven/tong_004.jpg" />
+                <h3>金玉满堂</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/tong_005.html')" rel="external" data-back="flase">
+                <img  src="image/seven/tong_005.jpg" />
+                <h3>龙戏珠（月台铁铸装饰）</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/tong_006.html')" rel="external" data-back="flase">
+                <img  src="image/seven/tong_006.jpg" />
+                <h3>岁岁有余</h3>
+            </a>
+            </li>
+
+            <li><a href="javascript:goTo('sub1/tong_007.html')" rel="external" data-back="flase">
+                <img  src="image/seven/tong_007.jpg" />
+                <h3>鳌鱼</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/tong_008.html')" rel="external" data-back="flase">
+                <img  src="image/seven/tong_008.jpg" />
+                <h3>英雄图</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/tong_009.html')" rel="external" data-back="flase">
+                <img  src="image/seven/tong_009.jpg" />
+                <h3>凤鹿图</h3>
+            </a>
+            </li>
+
+
+        </ul>
+
+        <div class="dis_list_tip">砖雕</div>
+        <ul data-role="listview" data-inset="true" class="catagory_con"><!-- data-inset="true"圆角-->
+            <li><a href="javascript:goTo('sub1/zd_001.html')" rel="external" data-back="flase">
+                <img  src="image/seven/zd_001.jpg" />
+                <h3>东方朔偷桃、麻姑献寿</h3>
+            </a>
+            </li>
+
+            <li><a href="javascript:goTo('sub1/zd_002.html')" rel="external" data-back="flase">
+                <img  src="image/seven/zd_002.jpg" />
+                <h3>福禄图</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/zd_003.html')" rel="external" data-back="flase">
+                <img  src="image/seven/zd_003.jpg" />
+                <h3>喜鹊登梅</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/zd_004.html')" rel="external" data-back="flase">
+                <img  src="image/seven/zd_004.jpg" />
+                <h3>梁山聚义</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/zd_005.html')" rel="external" data-back="flase">
+                <img  src="image/seven/zd_005.jpg" />
+                <h3>刘庆伏狼驹</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/zd_006.html')" rel="external" data-back="flase">
+                <img  src="image/seven/zd_006.jpg" />
+                <h3>和合二仙</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/zd_007.html')" rel="external" data-back="flase">
+                <img  src="image/seven/zd_007.jpg" />
+                <h3>老鼠啃葡萄</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/zd_008.html')" rel="external" data-back="flase">
+                <img  src="image/seven/zd_008.jpg" />
+                <h3>英雄图</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/zd_009.html')" rel="external" data-back="flase">
+                <img  src="image/seven/zd_009.jpg" />
+                <h3>五伦全图</h3>
+            </a>
+            </li>
+            <li><a href="javascript:goTo('sub1/zd_010.html')" rel="external" data-back="flase">
+                <img  src="image/seven/zd_010.jpg" />
+                <h3>百鸟图</h3>
+            </a>
+            </li>
+
+
+        </ul>
+    </div>
+    <div id="search_view_list" style="display: none">
+        <ul data-role="listview" data-inset="true" id="search_view_ul" class="catagory_con">
+        </ul>
+    </div>
+</div><!-- /page -->
+</body>
+</html>

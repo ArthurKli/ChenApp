@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>陈家祠</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"  href="css/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet"  href="css/jqm-icon-pack-1.1.1-original.css" />
+	<link rel="stylesheet"  href="css/view.css" />
+    <script type="text/javascript"  src="js/cordova-2.7.0.js"></script>
+	<script src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).bind("mobileinit", function()
+        {
+            if (navigator.userAgent.indexOf("Android") != -1)
+            {
+                $.mobile.defaultPageTransition = 'none';
+                $.mobile.defaultDialogTransition = 'none';
+            }
+        });
+    </script>
+	<script src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script src="js/global.js"></script>
+
+</head> 
+<body>
+<div data-role="page" >
+    <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/klass.min.js"></script>
+    <script type="text/javascript" src="js/code.photoswipe-3.0.5.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        /*
+         Overview:
+         ---------
+
+         Demonstrates inline functionality with indicators. This demo sets the images using an array.
+         There is nothing stopping you basing this on image dom elements like other examples.
+
+         Also in this demo I "hardcode" the indicators into the markup. Again, there is nothing stopping
+         you creating them as needed in the JavaScript.
+
+         */
+        (function(window, Util, PhotoSwipe){
+
+            Util.Events.domReady(function(e){
+
+                var instance, indicators;
+
+                instance = PhotoSwipe.attach(
+                        [
+                            { url: serverURL+'image/full/zhengting_001.jpg', caption: '龙戏珠'},
+                            { url: serverURL+'image/full/zhengting_002.jpg', caption: '榴开百子'},
+                            { url: serverURL+'image/full/zhengting_003.jpg', caption: '四季平安'},
+                            { url: serverURL+'image/full/zhengting_004.jpg', caption: '凤凰牡丹'}
+
+                        ],
+                        {
+                            target: window.document.querySelectorAll('#PhotoSwipeTarget')[0],
+                            preventHide: true,
+                            getImageSource: function(obj){
+                                return obj.url;
+                            },
+                            getImageCaption: function(obj){
+                                return obj.caption;
+                            }
+                        }
+                );
+
+
+                indicators = window.document.querySelectorAll('#Indicators span');
+
+                // onDisplayImage - set the current indicator
+                instance.addEventHandler(PhotoSwipe.EventTypes.onDisplayImage, function(e){
+
+                    var i, len;
+                    for (i=0, len=indicators.length; i<len; i++){
+                        indicators[i].setAttribute('class', '');
+                    }
+                    indicators[e.index].setAttribute('class', 'current');
+
+//                    alert(e.index);
+                    var ind=e.index+1;
+                    var ids="#display_view_ins_"+ind;
+                    $(".display_view_ins").hide();
+                    $(ids).show();
+
+
+
+                });
+
+                instance.show(0);
+
+            });
+
+
+        }(window, window.Code.Util, window.Code.PhotoSwipe));
+    </script>
+	<div data-role="header" data-theme="a" >
+		<div data-type="horizontal" align="left" class="ui-btn-left ui-header">
+            <a href="javascript: history.go(-1)" data-icon="arrow-l" rel="external" data-ajax="false">返回</a>
+            
+   		</div>                                           
+                <h1>图片展示</h1>
+                <a href="index.html" id="home" data-icon="home" class="ui-btn-right" rel="external" data-ajax="false">首页</a>
+				
+
+</div>
+    <div id="MainContent">
+
+        <div id="PhotoSwipeTarget"></div>
+        <div id="Indicators">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+
+    </div>
+
+    <div id="Footer">
+        <div class="display_view_ins" id="display_view_ins_1">
+            <div class="display_view_ins_title">龙戏珠</div>
+            <small>龙是中国神话中的一种善变化、能兴云雨、利万物的神异动物，是我国上古先民创造的理想动物形象和图腾。《庄子》有云：“千金之珠，必在九重之渊而骊龙颌下”。《埤雅》也言“龙珠在颌”。其意是说龙珠藏在龙口中，适当的时候，龙会把它吐出来。传说龙起源于蛇类，蛇类是卵生的，古人把蛇卵当作一种“珠”。龙戏珠就是龙戏“卵”，表现了龙这个神物对生命的呵护，表达了古人对传承不息的生命现象的认识和理解。龙戏珠图案，其珠多有火焰升腾，下面是滔滔海水，如火球跃出海面，让人联想到太阳升起在海平面的场景，因此也可理解为“太阳出海”。太阳自东方升起的，龙则是代表东方的神物。龙戏珠有太阳崇拜的意思，是太阳崇拜和龙崇拜的交融。</small>
+        </div>
+        <div class="display_view_ins" id="display_view_ins_2">
+            <div class="display_view_ins_title">榴开百子</div>
+            <small>古人把石榴当作生殖繁衍、子孙昌盛的象征物。据史书记载：北齐文宣帝高洋很宠爱自己的侄儿安德王高延宗，高延宗娶李祖收之女为妃，李妃母亲呈献两个石榴，文宣帝不解其意，大臣魏收说：“石榴房中多子，王新婚，妃母欲子孙众多。”皇帝听了很高兴。以后，我国民间就有了以石榴图案祝子孙繁盛的习俗。</small>
+        </div>
+        <div class="display_view_ins" id="display_view_ins_3">
+            <div class="display_view_ins_title">四季平安</div>
+            <small>图案由花瓶与月季组成。月季花每月都开花，也称长春花，代表一年四季；“瓶”与“平”同音，两者组合寓意四季平安。</small></div>
+        <div class="display_view_ins" id="display_view_ins_4">
+            <div class="display_view_ins_title">凤凰牡丹</div>
+            <small>凤凰是我国古代传说中的神鸟，也是鸟中之王，象征美丽和祥瑞；牡丹被称为百花之王，具有荣华富贵之态。凤凰牡丹象征祥瑞、富贵，寓意美满和幸福。花板内镶“光绪辛卯年”、“文如壁店造”，表明此瓦脊为光绪辛卯年（1891年）由文如壁店造。文如壁店：文如壁，顺德人，清康熙年间制陶名家，早期精制日常用具，为众喜爱，以名开店，后期精制各类屋脊饰物，技艺精湛，直至光绪年间，是花盆行的主要店号。子孙承继家业，在民国初年分为两店，一为“如壁生记”，一为“如壁”，二十世纪20年代歇业。</small></div>
+    </div>
+
+
+</div><!-- /page -->
+</body>
+</html>

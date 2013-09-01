@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>陈家祠</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"  href="css/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet"  href="css/jqm-icon-pack-1.1.1-original.css" />
+	<link rel="stylesheet"  href="css/view.css" />
+    <script type="text/javascript"  src="js/cordova-2.7.0.js"></script>
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/view.js"></script>
+
+</head> 
+<body>
+<div data-role="page" >
+    <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/klass.min.js"></script>
+    <script type="text/javascript" src="js/code.photoswipe-3.0.5.min.js"></script>
+    <script type="text/javascript">
+        var photoObj =[
+            { url: serverURL+'image/full/jxt_001.jpg', caption: '卸甲封王'},
+            { url: serverURL+'image/full/jxt_002.jpg', caption: '花开富贵'},
+            { url: serverURL+'image/full/jxt_003.jpg', caption: '麒麟送子'},
+            { url: serverURL+'image/full/jxt_004.jpg', caption: '福寿双全'}
+        ];
+    </script>
+	<div data-role="header" data-theme="a" data-position="fixed">
+		<div data-type="horizontal" align="left" class="ui-btn-left ui-header">
+            <a href="javascript: history.go(-1)" data-icon="arrow-l" rel="external" data-ajax="false">返回</a>
+            
+   		</div>                                           
+                <h1>图片展示</h1>
+                <a href="index.html" id="home" data-icon="home" class="ui-btn-right" rel="external" data-ajax="false">首页</a>
+</div>
+    <div id='display_load_image'><img id="display_load_image_in" src='css/images/loading.png' alt='loading...' /></div>
+    <div id="MainContent">
+
+        <div id="PhotoSwipeTarget"></div>
+        <div id="Indicators">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div id="Footer">
+        <div class="display_view_ins" id="display_view_ins_1">
+            <div class="display_view_ins_title">卸甲封王</div>
+            <small>故事叙述了唐朝大将郭子仪奉旨勤王，剿灭安禄山后班师还朝，面君复命，唐肃宗令他卸甲换袍封为汝阳王，官拜中书令。恰值七十大寿，官高爵显的八子七婿纷至沓来，文武百官也齐来贺寿。图中表现的是唐肃宗听“戎服面君”的郭子仪奏报平叛经过，并对其功劳大加赞许的场面。</small>
+        </div>
+        <div class="display_view_ins" id="display_view_ins_2">
+            <div class="display_view_ins_title">花开富贵</div>
+            <small>牡丹为花中之王，寓意富贵，牡丹盛开比喻花开富贵。</small>
+        </div>
+        <div class="display_view_ins" id="display_view_ins_3">
+            <div class="display_view_ins_title">麒麟送子</div>
+            <small>相传孔子诞生的前夜，孔母在睡梦中忽见风云际会、电闪雷鸣，突然一头龙头、鹿角、狮身、羊蹄、牛尾的灵兽，全身麟光闪闪，从天际飞腾而至，孔母瞬即惊醒。翌日清晨，一代圣人孔子降临世间，人们视孔子为麒麟送子。民间认为麒麟是仁兽，是吉祥的象征，能为人带来子嗣。</small>
+        </div>
+        <div class="display_view_ins" id="display_view_ins_4">
+            <div class="display_view_ins_title">福寿双全</div>
+            <small>“蝠”与“福”谐音，南极仙翁为寿星，合为福寿双全之意。</small>
+        </div>
+    </div>
+
+
+</div><!-- /page -->
+<script type="text/javascript" src="js/display.js"></script>
+</body>
+</html>

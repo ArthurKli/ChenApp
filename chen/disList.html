@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>陈家祠</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"  href="css/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet"  href="css/jqm-icon-pack-1.1.1-original.css" />
+	<link rel="stylesheet"  href="css/view.css" />
+    <script type="text/javascript"  src="js/cordova-2.7.0.js"></script>
+	<script src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).bind("mobileinit", function()
+        {
+            if (navigator.userAgent.indexOf("Android") != -1)
+            {
+                $.mobile.defaultPageTransition = 'none';
+                $.mobile.defaultDialogTransition = 'none';
+            }
+        });
+    </script>
+	<script src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/view.js"></script>
+
+</head> 
+<body class="disList_body">
+<div data-role="page" class="disList_body">
+	<div data-role="header" data-theme="a" data-position="fixed">
+		<div data-type="horizontal" align="left" class="ui-btn-left ui-header"> 
+            <a href="javascript: history.go(-1)" data-icon="arrow-l" rel="external" data-ajax="false">返回</a>
+            
+   		</div>                                           
+                <h1>雕塑列表</h1>
+                <a href="index.html" id="home" data-icon="home" class="ui-btn-right" rel="external" data-ajax="false">首页</a>
+				
+
+</div>
+    <div class="sli_mobile_header">
+        <form id="search" action="SearchServlet" method="post" class="search" data-ajax="false" onsubmit="return search_view();">
+            <table cellpadding='0' cellspacing='0' style="width: 100%; margin-bottom:0px; ">
+                <tr class="search_bg" >
+                    <td  style="width: 96%;">
+                        <input id="keyword" type="search" name="keyword" placeholder="搜索展品" class="ui-body-c"  />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div id="default_view_list">
+    <div class="dis_list_tip">正厅</div>
+    <ul data-role="listview" data-inset="true" class="catagory_con"><!-- data-inset="true"圆角-->
+        <li><a href="javascript:goTo('disView_zhengting.html')" rel="external" data-back="flase">
+            <img  src="image/disList/zhengting_001.png" />
+            <h3>龙戏珠</h3>
+        </a>
+        </li>
+        <li><a href="javascript:goTo('disView_zhengting.html')" rel="external" data-back="flase">
+            <img src="image/disList/zhengting_002.png" />
+            <h3>榴开百子</h3>
+        </a>
+        </li>
+        <li><a href="javascript:goTo('disView_zhengting.html')" rel="external" data-back="flase">
+            <img src="image/disList/zhengting_003.png" />
+            <h3>四季平安</h3>
+        </a>
+        </li>
+        <li><a href="javascript:goTo('disView_zhengting.html')" rel="external" data-back="flase">
+            <img src="image/disList/zhengting_004.png" />
+            <h3>凤凰牡丹</h3>
+        </a>
+        </li>
+    </ul>
+    <div class="dis_list_tip">东厅</div>
+    <ul data-role="listview" data-inset="true" class="catagory_con"><!-- data-inset="true"圆角-->
+        <li><a href="javascript:goTo('disView_dongting.html')" rel="external" data-back="flase">
+            <img  src="image/disList/dongting_001.png" />
+            <h3>羲之题扇</h3>
+        </a>
+        </li>
+        <li><a href="javascript:goTo('disView_dongting.html')" rel="external" data-back="flase">
+            <img src="image/disList/dongting_002.png" />
+            <h3>太白醉酒</h3>
+        </a>
+        </li>
+        <li><a href="javascript:goTo('disView_dongting.html')" rel="external" data-back="flase">
+            <img src="image/disList/dongting_003.png" />
+            <h3>千里送京娘</h3>
+        </a>
+        </li>
+        <li><a href="javascript:goTo('disView_dongting.html')" rel="external" data-back="flase">
+            <img src="image/disList/dongting_004.png" />
+            <h3>戏赌华山一局棋</h3>
+        </a>
+        </li>
+    </ul>
+    <div class="dis_list_tip">西厅</div>
+    <ul data-role="listview" data-inset="true" class="catagory_con"><!-- data-inset="true"圆角-->
+        <li><a href="javascript:goTo('disView_xiting.html')" rel="external" data-back="flase">
+            <img  src="image/disList/xiting_001.png" />
+            <h3>李元霸伏龙驹</h3>
+        </a>
+        </li>
+
+    </ul>
+    <div class="dis_list_tip">月台</div>
+    <ul data-role="listview" data-inset="true" class="catagory_con"><!-- data-inset="true"圆角-->
+        <li><a href="javascript:goTo('disView_yuetai.html')" rel="external" data-back="flase">
+            <img  src="image/disList/yuetai_001.png" />
+            <h3>双福捧寿</h3>
+        </a>
+        </li>
+        <li><a href="javascript:goTo('disView_yuetai.html')" rel="external" data-back="flase">
+            <img src="image/disList/yuetai_002.png" />
+            <h3>月台石雕装饰</h3>
+        </a>
+        </li>
+        <li><a href="javascript:goTo('disView_yuetai.html')" rel="external" data-back="flase">
+            <img src="image/disList/yuetai_003.png" />
+            <h3>月台望柱头石雕</h3>
+        </a>
+        </li>
+    </ul>
+    <div class="dis_list_tip">聚贤堂</div>
+    <ul data-role="listview" data-inset="true" class="catagory_con"><!-- data-inset="true"圆角-->
+        <li><a href="javascript:goTo('disView_jxt.html')" rel="external" data-back="flase">
+            <img  src="image/disList/jxt_001.png" />
+            <h3>卸甲封王</h3>
+        </a>
+        </li>
+        <li><a href="javascript:goTo('disView_jxt.html')" rel="external" data-back="flase">
+            <img src="image/disList/jxt_002.png" />
+            <h3>花开富贵</h3>
+        </a>
+        </li>
+        <li><a href="javascript:goTo('disView_jxt.html')" rel="external" data-back="flase">
+            <img src="image/disList/jxt_003.png" />
+            <h3>麒麟送子</h3>
+        </a>
+        </li>
+        <li><a href="javascript:goTo('disView_jxt.html')" rel="external" data-back="flase">
+            <img src="image/disList/jxt_004.png" />
+            <h3>福寿双全</h3>
+        </a>
+        </li>
+    </ul>
+
+    <div class="dis_list_tip">前东厢</div>
+    <ul data-role="listview" data-inset="true" class="catagory_con"><!-- data-inset="true"圆角-->
+        <li><a href="javascript:goTo('disView_qdx.html')" rel="external" data-back="flase">
+            <img  src="image/disList/qdx_001.png" />
+            <h3>滕王阁序</h3>
+        </a>
+        </li>
+    </ul>
+
+    <div class="dis_list_tip">后东厢</div>
+    <ul data-role="listview" data-inset="true" class="catagory_con"><!-- data-inset="true"圆角-->
+        <li><a href="javascript:goTo('disView_hdx.html')" rel="external" data-back="flase">
+            <img  src="image/disList/hdx_001.png" />
+            <h3>新会葵艺展</h3>
+        </a>
+        </li>
+    </ul>
+    <div class="dis_list_tip">后东斋</div>
+    <ul data-role="listview" data-inset="true" class="catagory_con"><!-- data-inset="true"圆角-->
+        <li><a href="javascript:goTo('disView_hdz.html')" rel="external" data-back="flase">
+            <img  src="image/disList/hdz_001.png" />
+            <h3>馆藏潮绣精品展</h3>
+        </a>
+        </li>
+    </ul>
+    <div class="dis_list_tip">前西厢</div>
+    <ul data-role="listview" data-inset="true" class="catagory_con"><!-- data-inset="true"圆角-->
+        <li><a href="javascript:goTo('disView_qxx.html')" rel="external" data-back="flase">
+            <img  src="image/disList/qxx_001.png" />
+            <h3>夜宴桃李园</h3>
+        </a>
+        </li>
+    </ul>
+    </div>
+    <div id="search_view_list" style="display: none">
+        <ul data-role="listview" data-inset="true" id="search_view_ul" class="catagory_con">
+            </ul>
+    </div>
+</div><!-- /page -->
+</body>
+</html>

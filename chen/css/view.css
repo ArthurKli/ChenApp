@@ -1,0 +1,259 @@
+a{
+    text-decoration:none;
+}
+.view_mid_list{
+    /*background-color: white;*/
+    height: 72px;
+}
+.view_mid_list span{
+    font-size: 11pt;
+}
+.view_mid_div{
+    width: 100%;
+      height: 40px;
+    background-color: #d3d3d3;
+}
+.view_mid_div img{
+    position: absolute;
+    right: 20px;
+}
+#view_mid_div_more a{
+    position: absolute;
+    right: 20px;
+    margin-top: 6px;
+    padding: 4px;
+    color: #fcfcfc;
+    background-color: #000000;
+    -moz-border-radius: 5px; /*��Firefox֧�֣�ʵ��Բ��Ч��*/
+    -webkit-border-radius: 5px; /*��Safari,Chrome֧�֣�ʵ��Բ��Ч��*/
+    -khtml-border-radius: 5px; /*��Safari,Chrome֧�֣�ʵ��Բ��Ч��*/
+    border-radius: 5px; /*��Opera��Safari,Chrome֧�֣�ʵ��Բ��Ч��*/
+    /*font-size: 18px;*/
+}
+
+.view_mid_div_more_link{
+    background-color: #3030ff;
+}
+.view_mid_div_zhanpin{
+    /*background-image: url("images/place_con_tit_bg.png.png");*/
+
+    background-repeat: no-repeat;
+    font-size: 24px;
+    color: #fcfcfc;
+
+    height: 30px;
+    margin: 3px;
+    /*padding: 2px 4px 4px 31px;*/
+    position: absolute;
+    width: 117px;
+}
+
+
+.slider_div{
+    position: absolute;
+    right: 0px;
+}
+.slider_text{
+    position: relative;
+    text-align: center;
+    top: 6px;
+}
+
+#show_music_player{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    font-size:0 ;
+    z-index: 2500 ;
+    /*display: none;*/
+}
+#show_music_player img{
+    float:left;
+    overflow:hidden;
+    margin:0px;
+    padding:0px;
+
+}
+#show_music_body2{
+    display: none;
+}
+#show_music_player_click{
+    /*background-color: red;*/
+    position: absolute;
+    left: 43%;
+    top:26px;
+    width: 50px;
+    height: 50px;
+}
+
+#hide_music_player{
+    /*background-color: red;*/
+    height: 28px;
+    left: 40%;
+    position: absolute;
+    top: -9px;
+    width: 62px;
+}
+.info_content{
+    padding-top: 0;
+}
+.catagory_con h3{
+    color:#8CB69E;
+}
+.catagory_con{
+    margin: 6px;
+}
+.catagory_con a img{
+    /*border: 3px ridge #8c8c8c;*/
+    height: 67px;
+    left: 15px;
+    padding: 0;
+    top: 8px;
+}
+
+.div_apps {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 25%;
+}
+.div_apps {
+    float: left;
+    width: 25%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+#listObj img {
+    /*border: 2px solid #D9D9D9;*/
+    border-radius: 10px 10px 10px 10px;
+    width: 50px;
+}
+
+.dis_list_tip{
+    font-size: 17pt;
+    padding-left: 10px;
+}
+.display_view_ins{
+    display: none;
+}
+#display_view_ins_1{
+    display: block;
+}
+.disList_body{
+    background-color: #e6d6ca;
+}
+
+
+
+
+
+#view_content_tip{
+    font-size: 24px;
+    color: #FCFCFC;
+    background-color: #D3D3D3;
+}
+
+.view_content_letter{
+    letter-spacing : 3px;
+    line-height : 150%;
+
+
+}
+.display_view_ins_title{
+    font-size: 19px;
+    font-weight: bold;
+    line-height : 150%;
+}
+ #submit_buttom{
+     height: 35px;
+ }
+ .view_content_main_image{
+
+     border: 3px ridge #8c8c8c;
+
+ }
+ .view_content_playMusic{
+     right: 2px;
+     bottom: 2px;
+     position: relative;
+ }
+
+ #display_load_image{
+     position: absolute;
+     /*top:25%;*/
+     /*left: 45%;*/
+     z-index: 3000;
+
+ }
+
+
+hr{
+    border:none;
+    border-top:1px solid #e1e1e1;
+    height:0;
+}
+
+.view_top_outer{
+    position:relative;
+}
+.view_top_inner span{
+    width: 102%;
+    background: #000;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    filter: alpha(opacity = 50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    font: bold 12px/30px Verdana, Arial;
+    text-align: center;
+}
+#show_music_handle{
+    position: fixed;
+    bottom: 0px;
+    z-index: 2500;
+}
+
+.search_bg{
+    background-image: url("images/search_bg.png")
+}
+.person_name_link a{
+    text-decoration: underline;
+
+
+}
+#dis_overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top:0;
+    z-index: 2000;
+    display: none;
+
+
+}
+.person_name_link{
+    line-height: 2;
+}
+
+/****重定义jq****/
+.ui-li, .ui-li.ui-field-contain{
+    border-width: 0.5px 0 0;
+}
+/*.ui-input-search{*/
+    /*border-radius: 0.1em 0.1em 0.1em 0.1em;*/
+/*}*/
+a,span{
+    text-shadow:none
+}
+
+.ui-body-c, .ui-overlay-c {
+    background: linear-gradient(#F9FFF9, #EEEEEE) repeat scroll 0 0 #F9F9F9;
+    border: 1px solid #AAAAAA;
+    color: #333333;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+

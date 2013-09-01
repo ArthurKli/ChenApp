@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>自定义地图类型</title>
+    <script type="text/javascript" charset="utf-8" src="js/cordova-2.7.0.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1.5 user-scalable=yes">-->
+    <link rel="stylesheet"  href="css/jquery.mobile-1.2.0.min.css" />
+
+
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+     <script type="text/javascript">
+         $(document).ready(function(){
+
+             $("#pls_clickme").click(function(){
+                     goTo("list.html");
+             });
+
+         });
+     </script>
+</head>
+<body>
+<div data-role="page">
+    <input type="button" value="点点点" id="pls_clickme" />
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+          /*半小时路线*/
+       #tip1 {
+           top:62%;
+           left: 49%;
+            background-image: url("images/icon/1.png");
+            background-repeat: no-repeat;
+            z-index: 150;
+        }
+       #tip11 {
+           top:42%;
+           left: 49%;
+           background-image: url("images/icon/2.png");
+           background-repeat: no-repeat;
+           z-index: 149;
+
+       }
+
+
+        #tip4 {
+            top:34%;
+            left: 49%;
+            background-image: url("images/icon/3.png");
+            background-repeat: no-repeat;
+            z-index: 147;
+        }
+
+        #tip6 {
+            top:15%;
+            left: 49%;
+            background-image: url("images/icon/4.png");
+            background-repeat: no-repeat;
+            z-index: 145;
+        }
+        #tip7 {
+            top:15%;
+            left: 80%;
+            background-image: url("images/icon/5.png");
+            background-repeat: no-repeat;
+            z-index: 144;
+        }
+
+        #tip10 {
+            left: 80%;
+            top: 49%;
+            background-image: url("images/icon/6.png");
+            background-repeat: no-repeat;
+            z-index: 141;
+        }
+
+
+         /*hidden*/
+
+
+       #tip2 {
+           top:34%;
+           left: 49%;
+           background-image: url("images/icon/1.png");
+           background-repeat: no-repeat;
+           z-index: 149;
+           display: none;
+       }
+       #tip3 {
+           display: none;
+           top:40%;
+           left: 20%;
+           background-image: url("images/icon/2.png");
+           background-repeat: no-repeat;
+           z-index: 148;
+       }
+       #tip5 {
+           display: none;
+           top:15%;
+           left: 20%;
+           background-image: url("images/icon/4.png");
+           background-repeat: no-repeat;
+           z-index: 146;
+       }
+
+       #tip8 {
+           display: none;
+           top:25%;
+           left: 87%;
+           background-image: url("images/icon/7.png");
+           background-repeat: no-repeat;
+           z-index: 143;
+       }
+       #tip9 {
+           display: none;
+           top:40%;
+           left: 75%;
+           background-image: url("images/icon/8.png");
+           background-repeat: no-repeat;
+           z-index: 145;
+       }
