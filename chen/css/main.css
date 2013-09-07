@@ -10,6 +10,9 @@ body, html {
 body,html,div{
     text-shadow:none !important;
 }
+#index_head {
+    /*display: none;*/
+}
 
 #wrapper {
     position:absolute; z-index:0;

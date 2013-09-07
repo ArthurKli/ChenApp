@@ -326,6 +326,24 @@ $(function(){
         horseNews();
     });
 
+    $(".moveNews").live("click",function(){
+        alert(this.name);
+        $('#partner_login_ifrm').css({
+            'width':$(window).width(),
+            'height':$(window).height(),
+            'z-index':'99999'
+        });      //设置iframe满屏显示，让用户没有感觉是在iframe打开
+        $("#indexPage").hide();
+        $("#index_head").show();
+        $('#partner_login_ifrm').attr('src',this.name);         //要打开的授权页面地址
+
+//        window.location.href= this.name;
+    });
+    $("#index_back").click(function(){
+        $("#indexPage").show();
+        $("#index_head").hide();
+    });
+
     $(".half_hour").click(function(){
         changeLine(1);
         $(".change_line_img").hide();
@@ -603,25 +621,27 @@ function displayFourIcon(id,dis){
 }
 
 function horseNews(){
-//    $.post("http://localhost:8080/ChenServ/News", function(data){
-//        alert("Data Loaded: " + data);
-//    });
+/*
+
     $.support.cors = true;
     $.mobile.allowCrossDomainPages=true;
     $.ajax({
         type : "GET",
-        url : "http://www.gzchenjiaci.com/museum/szhd_apk.aspx?MenuID=02010406",
+//        url : "http://www.gzchenjiaci.com/museum/szhd_apk.aspx?MenuID=02010406",
+        url : "http://192.168.22.1:8080/ChenServ/News",
         dataType : "text",
         jsonp: 'jsoncallback',
         success : function(data)
         {
-//            var data="<a href='#'>请教高手帮我看下这段代码</a><a href='#'>asdddddddddddd</a><a href='#'>lfk了付款了凡客</a>" ;
+//            var data="<a class='moveNews'  href='#' name='http://www.baidu.com/index.php'>NEWasdasadassdasd</a><a class='moveNews' href='#' name='http://www.baidu.com/index.php'>NEW222222222222</a>" ;
             $("#index_shell_div").append(data);
             return true;
         }
     });
+*/
 
-
+    var data="<a class='moveNews'  href='#' name='http://m.baidu.com'>NEWasdasadassdasd</a><a class='moveNews' href='#' name='http://m.baidu.com'>NEW222222222222</a>" ;
+    $("#index_shell_div").append(data);
     var box=document.getElementById("index_shell_div"),can=true;
     box.innerHTML+=box.innerHTML;
     box.onmouseover=function(){can=false};
