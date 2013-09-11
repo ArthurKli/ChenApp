@@ -2,6 +2,8 @@ $.mobile.transitionFallbacks.slide = "none";
 $.mobile.buttonMarkup.hoverDelay = "false";
 var serverURL = 'http://x.huango.cn:8080/ChenApp/';
 var session=window.sessionStorage;
+var fileSystem;
+
 // var serverURL = 'http://123.169.142.183:8080/wglWeb';
 function goTo(page) {
 	showLoading();
@@ -59,6 +61,22 @@ function onDeviceReady() {
 	document.addEventListener("backbutton", eventBackButton, false); // 返回键
 	//document.addEventListener("menubutton", eventMenuButton, false); // 菜单键
 	//document.addEventListener("searchbutton", eventSearchButton, false); // 搜索键
+
+    // 文件系统
+//    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFSSuccess, onFSError);
+
+}
+function onFSSuccess(fs) {
+    fileSystem = fs;
+
+//    alert("file system:"+fileSystem.name +
+//        ".root entry name is "+fileSystem.root.name);
+//    doDirectoryListing();
+}
+//generic error handler
+function onFSError(e) {
+//    alert(e.toString());
+    console.log(e.toString());
 }
 
 // 返回键

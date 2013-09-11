@@ -2,6 +2,7 @@ var storage = window.localStorage;
 var session=window.sessionStorage;
 var baseMedia;  //定义一个全局的音频对象
 var baseAudio="/android_asset/www/audio/";
+var nameFile="/android_asset/www/test/test.xml";
 //var baseAudio="http://x.huango.cn:8080/ChenApp/audio/";
 
 var index =100;
@@ -621,35 +622,35 @@ function displayFourIcon(id,dis){
 }
 
 function horseNews(){
-/*
 
     $.support.cors = true;
-    $.mobile.allowCrossDomainPages=true;
+    $.mobile.allowCrossDomainPages = true;
     $.ajax({
-        type : "GET",
-//        url : "http://www.gzchenjiaci.com/museum/szhd_apk.aspx?MenuID=02010406",
-        url : "http://192.168.22.1:8080/ChenServ/News",
-        dataType : "text",
-        jsonp: 'jsoncallback',
-        success : function(data)
-        {
-//            var data="<a class='moveNews'  href='#' name='http://www.baidu.com/index.php'>NEWasdasadassdasd</a><a class='moveNews' href='#' name='http://www.baidu.com/index.php'>NEW222222222222</a>" ;
+        type:"GET",
+        url:"http://www.gzchenjiaci.com/museum/szhd_apk.aspx?MenuID=02010406",
+//        url : "http://192.168.22.1:8080/ChenServ/News",
+        dataType:"text",
+        jsonp:'jsoncallback',
+        success:function (data) {
             $("#index_shell_div").append(data);
             return true;
         }
     });
-*/
 
-    var data="<a class='moveNews'  href='#' name='http://m.baidu.com'>NEWasdasadassdasd</a><a class='moveNews' href='#' name='http://m.baidu.com'>NEW222222222222</a>" ;
-    $("#index_shell_div").append(data);
-    var box=document.getElementById("index_shell_div"),can=true;
-    box.innerHTML+=box.innerHTML;
-    box.onmouseover=function(){can=false};
-    box.onmouseout=function(){can=true};
-    new function (){
-        var stop=box.scrollTop%18==0&&!can;
-        if(!stop)box.scrollTop==parseInt(box.scrollHeight/2)?box.scrollTop=0:box.scrollTop++;
-        setTimeout(arguments.callee,box.scrollTop%18?10:2000);
+//    var data="<a class='moveNews'  href='#' name='http://m.baidu.com'>NEWasdasadassdasd</a><a class='moveNews' href='#' name='http://m.baidu.com'>NEW222222222222</a>" ;
+//    $("#index_shell_div").append(data);
+    var box = document.getElementById("index_shell_div"), can = true;
+    box.innerHTML += box.innerHTML;
+    box.onmouseover = function () {
+        can = false
+    };
+    box.onmouseout = function () {
+        can = true
+    };
+    new function () {
+        var stop = box.scrollTop % 18 == 0 && !can;
+        if (!stop)box.scrollTop == parseInt(box.scrollHeight / 2) ? box.scrollTop = 0 : box.scrollTop++;
+        setTimeout(arguments.callee, box.scrollTop % 18 ? 10 : 2000);
     };
 }
 
