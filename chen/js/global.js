@@ -1,6 +1,7 @@
 $.mobile.transitionFallbacks.slide = "none";
 $.mobile.buttonMarkup.hoverDelay = "false";
 var serverURL = 'http://x.huango.cn:8080/ChenApp/';
+//var serverURL = '';
 var session=window.sessionStorage;
 var fileSystem;
 
@@ -91,6 +92,10 @@ function eventBackButton() {
                changeSizeBig(60);
                horseNews();
            }else{
+               if($("#indexPage").css("display")=='none'){ //打开了新闻iframe
+                   $("#index_back").trigger("click");
+                   return false;
+               }
                myAlert('再点击一次退出!');
                document.removeEventListener("backbutton", eventBackButton, false); // 注销返回键
                document.addEventListener("backbutton", exitApp, false);//绑定退出事件

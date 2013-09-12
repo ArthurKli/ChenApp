@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>陈家祠</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  href="css/jquery.mobile-1.2.0.min.css" />
+    <link rel="stylesheet"  href="css/jqm-icon-pack-1.1.1-original.css" />
+    <link rel="stylesheet"  href="css/view.css" />
+    <script type="text/javascript"  src="js/cordova-2.7.0.js"></script>
+    <script src="js/jquery-1.7.1.min.js"></script>
+
+    <script src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script src="js/global.js"></script>
+
+</head>
+<body>
+<div data-role="page" >
+    <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/klass.min.js"></script>
+    <script type="text/javascript" src="js/code.photoswipe-3.0.5.min.js"></script>
+
+
+
+    <script type="text/javascript">
+        var photoObj =[
+            { url: serverURL+'image/full/xiting3_001.jpg', caption: '李元霸伏龙驹'}
+        ];
+
+    </script>
+    <div data-role="header" data-theme="a" data-position="fixed">
+        <div data-type="horizontal" align="left" class="ui-btn-left ui-header">
+            <a href="javascript: history.go(-1)" data-icon="arrow-l" rel="external" data-ajax="false">返回</a>
+
+        </div>
+        <h1>图片展示</h1>
+        <a href="index.html" id="home" data-icon="home" class="ui-btn-right" rel="external" data-ajax="false">首页</a>
+
+
+    </div>
+    <div id='display_load_image'><img id="display_load_image_in" src='css/images/loading.png' alt='loading...' /></div>
+    <div id="MainContent">
+
+        <div id="PhotoSwipeTarget"></div>
+        <div id="Indicators">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+
+    </div>
+
+    <div id="Footer">
+        <div class="display_view_ins" id="display_view_ins_1">
+            <div class="display_view_ins_title">李元霸伏龙驹</div>
+            <small>传说隋末李渊的五子李元霸是上界雷震子下凡，天生神力，因出生异相不为李渊重视。在李渊被宇文化及诬陷抄斩时，李元霸劫法场救父。隋炀帝怕事情闹大，只得无罪释放李渊父子。李元霸不服宇文成都的“天下第一勇士”称号，在殿上与之比试，凭神力获胜，定下十日后再比试各路功夫。然而李元霸虽精通十八般武艺，却不懂骑马之术，刚巧，五义庙有龙驹一匹，无人能伏，李元霸以自己神力把马降服收为己用。十日后，李元霸骑着无鞍马，双手拿着不称手的锤，在毫无盔甲保护的情况下，与宇文成都在演武场上比武，越战越勇，宇文化及见宇文成都力有不支，为免儿子吃亏，忙叫隋炀帝判他们打平。隋炀帝赐李元霸紫金锤一对，金盔甲一套，纯金马鞍一幅，封为神勇大将军。</small>
+        </div>
+    </div>
+
+
+</div><!-- /page -->
+<script type="text/javascript" src="js/display.js"></script>
+</body>
+</html>

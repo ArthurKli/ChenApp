@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>陈家祠</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"  href="css/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet"  href="css/jqm-icon-pack-1.1.1-original.css" />
+	<link rel="stylesheet"  href="css/view.css" />
+    <script type="text/javascript"  src="js/cordova-2.7.0.js"></script>
+	<script src="js/jquery-1.7.1.min.js"></script>
+
+	<script src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script src="js/global.js"></script>
+
+</head> 
+<body>
+<div data-role="page" >
+    <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/klass.min.js"></script>
+    <script type="text/javascript" src="js/code.photoswipe-3.0.5.min.js"></script>
+
+
+
+    <script type="text/javascript">
+        var photoObj =[
+            { url: serverURL+'image/full/xiting2_001.jpg', caption: '太白醉写'},
+            { url: serverURL+'image/full/xiting2_002.jpg', caption: '小将裴元庆'}
+        ];
+
+    </script>
+	<div data-role="header" data-theme="a" data-position="fixed">
+		<div data-type="horizontal" align="left" class="ui-btn-left ui-header">
+            <a href="javascript: history.go(-1)" data-icon="arrow-l" rel="external" data-ajax="false">返回</a>
+            
+   		</div>                                           
+                <h1>图片展示</h1>
+                <a href="index.html" id="home" data-icon="home" class="ui-btn-right" rel="external" data-ajax="false">首页</a>
+				
+
+</div>
+    <div id='display_load_image'><img id="display_load_image_in" src='css/images/loading.png' alt='loading...' /></div>
+    <div id="MainContent">
+
+        <div id="PhotoSwipeTarget"></div>
+        <div id="Indicators">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+
+    </div>
+
+    <div id="Footer">
+        <div class="display_view_ins" id="display_view_ins_1">
+            <div class="display_view_ins_title">太白醉写</div>
+            <small>这是一个广为流传故事，讲的是李白赴京赶考，因不肯贿赂主试官杨国忠和高力士，被逐出考场。后蛮国以蛮文进表，满朝大臣无人能解。贺知章等人力荐李白解表，李白藉此机会捉弄权贵，奏请万岁赐酒，要杨国忠、高力士倒酒侍候左右，始进行解读。玄宗又命李白以蛮书草诏以宣国威，李白又奏请要杨国忠磨墨、高力士脱靴才答应草诏，皇帝正是用人之际,即下令杨、高照办，满足李白的要求。李白一泄考场被逐之恨，酒酣畅饮之后，信手挥洒草成诏书。</small>
+        </div>
+        <div class="display_view_ins" id="display_view_ins_2">
+            <div class="display_view_ins_title">小将裴元庆</div>
+            <small>出自《说唐》。邱瑞奉旨征瓦岗，徐茂公用计令其归降了瓦岗寨。隋炀帝闻，急召山马关总兵裴仁基，裴氏父子四人赶至，见炀帝与国丈张大宾对弈，因侯等一个多时辰仍未见动静，三子裴元庆怒揪国丈，从此结仇。炀帝命裴仁基父子讨瓦岗寨，张大宾自请监察行军使。裴元庆金隄关显威，瓦岗寨逞能，张大宾欲害裴元庆，裴氏父子怒投瓦岗寨。后裴元庆之姐嫁与瓦岗山起义军寨主“混世魔王”程咬金。裴元庆手使两把大锤，共重三百斤，勇猛异常，是隋唐第三条好汉。</small>
+        </div>
+        <!--<div class="display_view_ins" id="display_view_ins_3">-->
+            <!--<div class="display_view_ins_title">裴元庆锤打程咬金</div>-->
+            <!--<small>故事出自《说唐》。隋炀帝闻邱瑞归降瓦岗寨，急召山马关总兵裴仁基父子，但炀帝与国丈张大宾对弈早了忘国事，三子裴元庆怒揪国丈，从此结仇。裴仁基父子奉命征瓦岗寨，张大宾自请监察行军使。裴元庆攻下金隄关，直取瓦岗寨。单雄信、秦叔宝等与裴元庆交手，均战败而回。寨主“混世魔王”程咬金亲自出战，也被裴元庆（图中使锤小孩）双锤震得两手出血。裴仁基见元庆连挫多人，恐其脱力，鸣金收兵。张大宾借此诬陷裴氏父子违抗军令当问斩，裴氏父子怒投瓦岗寨。</small>-->
+        <!--</div>-->
+
+    </div>
+
+
+</div><!-- /page -->
+<script type="text/javascript" src="js/display.js"></script>
+</body>
+</html>

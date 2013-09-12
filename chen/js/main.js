@@ -328,7 +328,6 @@ $(function(){
     });
 
     $(".moveNews").live("click",function(){
-        alert(this.name);
         $('#partner_login_ifrm').css({
             'width':$(window).width(),
             'height':$(window).height(),

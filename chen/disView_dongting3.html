@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>陈家祠</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  href="css/jquery.mobile-1.2.0.min.css" />
+    <link rel="stylesheet"  href="css/jqm-icon-pack-1.1.1-original.css" />
+    <link rel="stylesheet"  href="css/view.css" />
+    <script type="text/javascript"  src="js/cordova-2.7.0.js"></script>
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/view.js"></script>
+</head>
+<body>
+<div data-role="page" >
+    <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/klass.min.js"></script>
+    <script type="text/javascript" src="js/code.photoswipe-3.0.5.min.js"></script>
+    <script type="text/javascript">
+        var photoObj =[
+            { url: serverURL+'image/full/dongting3_001.jpg', caption: '羲之题扇'},
+            { url: serverURL+'image/full/dongting3_002.jpg', caption: '太白醉酒'},
+            { url: serverURL+'image/full/dongting3_003.jpg', caption: '千里送京娘'},
+            { url: serverURL+'image/full/dongting3_004.jpg', caption: '戏赌华山一局棋'}
+        ];
+    </script>
+    <div data-role="header" data-theme="a" data-position="fixed">
+        <div data-type="horizontal" align="left" class="ui-btn-left ui-header">
+            <a  data-rel="back" data-icon="arrow-l" rel="external" data-ajax="false">返回</a>
+        </div>
+        <h1>图片展示</h1>
+        <a href="index.html" id="home" data-icon="home" class="ui-btn-right" rel="external" data-ajax="false">首页</a>
+    </div>
+    <div id='display_load_image'><img id="display_load_image_in" src='css/images/loading.png' alt='loading...' /></div>
+    <div id="MainContent">
+        <div id="PhotoSwipeTarget"></div>
+        <div id="Indicators">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div id="Footer">
+        <div class="display_view_ins" id="display_view_ins_1">
+            <div class="display_view_ins_title">羲之题扇</div>
+            <small>有一次，王羲之经过市集，见一老婆婆拎一篮竹扇在叫卖。那种竹扇很简陋，没有什么装饰，引不起过路人的兴趣，无人问津。王羲之见此，很同情那老婆婆，就上前跟她说：“你这竹扇上没画没字，当然卖不出去，我给你题上字，怎么样？”老婆婆不认识王羲之，见他这样热心，也就把竹扇交给他写了。王羲之提笔在每把扇面上龙飞凤舞地写了几个字，就还给老婆婆。老婆婆不识字，觉得他写得很潦草，有点不高兴。王羲之安慰她说：“别急。你只需告诉买扇的人，上面是王右军写的字。”王羲之离开后，老婆婆就照他的话做了。市集上的人一看真是王右军的书法，都抢着买，一篮竹扇马上就卖完了。图中表现的是王羲之准备帮老婆婆写扇的场景。</small>
+        </div>
+        <div class="display_view_ins" id="display_view_ins_2">
+            <div class="display_view_ins_title">太白醉酒</div>
+            <small>古人把石榴当作生殖繁衍、子孙昌盛的象征物。据史书记载：北齐文宣帝高洋很宠爱自己的侄儿安德王高延宗，高延宗娶李祖收之女为妃，李妃母亲呈献两个石榴，文宣帝不解其意，大臣魏收说：“石榴房中多子，王新婚，妃母欲子孙众多。”皇帝听了很高兴。以后，我国民间就有了以石榴图案祝子孙繁盛的习俗。</small>
+        </div>
+        <div class="display_view_ins" id="display_view_ins_3">
+            <div class="display_view_ins_title">千里送京娘</div>
+            <small>赵匡胤从盗窟中救出少女赵京娘，结成兄妹并护送她回家。途中，京娘见赵光明磊落，气宇不凡，顿生爱慕之心，多次用言语试探，欲以身相许，但赵以救人于危难之中，不应图报，婉言拒绝。图中赵匡胤送京娘至娘家村头，二人互道珍重，依依惜别。</small>
+        </div>
+        <div class="display_view_ins" id="display_view_ins_4">
+            <div class="display_view_ins_title">戏赌华山一局棋</div>
+            <small>又名赵匡胤输华山。赵匡胤未得志时，好弈且艺高，非常自负。后随军陕西，闻华山有道人陈抟老祖，弈艺超群，特登山向其挑战，以一局决定胜负，戏言用整座华山为赌注。双方对弈激烈，战至残局，赵原可获胜，但因操之过急，误走败着，被陈抟老祖反败为胜。赵匡胤登基后，实践诺言，将整座华山拨归陈抟老祖所有，永免纳粮税。图中塑造了赵匡胤与陈抟老祖对弈的情景</small>
+        </div>
+    </div>
+
+
+</div><!-- /page -->
+<script type="text/javascript" src="js/display.js"></script>
+</body>
+</html>

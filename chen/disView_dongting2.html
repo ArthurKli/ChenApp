@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>陈家祠</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"  href="css/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet"  href="css/jqm-icon-pack-1.1.1-original.css" />
+	<link rel="stylesheet"  href="css/view.css" />
+    <script type="text/javascript"  src="js/cordova-2.7.0.js"></script>
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/view.js"></script>
+</head>
+<body>
+<div data-role="page" >
+    <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/klass.min.js"></script>
+    <script type="text/javascript" src="js/code.photoswipe-3.0.5.min.js"></script>
+    <script type="text/javascript">
+        var photoObj =[
+            { url: serverURL+'image/full/dongting2_001.jpg', caption: '刘海洒钱'},
+            { url: serverURL+'image/full/dongting2_002.jpg', caption: '东方朔捧桃'},
+            { url: serverURL+'image/full/dongting2_003.jpg', caption: '丁山射雁'},
+            { url: serverURL+'image/full/dongting2_004.jpg', caption: '岳家庄'}
+        ];
+    </script>
+	<div data-role="header" data-theme="a" data-position="fixed">
+		<div data-type="horizontal" align="left" class="ui-btn-left ui-header">
+            <a  data-rel="back" data-icon="arrow-l" rel="external" data-ajax="false">返回</a>
+   		</div>
+                <h1>图片展示</h1>
+                <a href="index.html" id="home" data-icon="home" class="ui-btn-right" rel="external" data-ajax="false">首页</a>
+</div>
+    <div id='display_load_image'><img id="display_load_image_in" src='css/images/loading.png' alt='loading...' /></div>
+    <div id="MainContent">
+        <div id="PhotoSwipeTarget"></div>
+        <div id="Indicators">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div id="Footer">
+        <div class="display_view_ins" id="display_view_ins_1">
+            <div class="display_view_ins_title">刘海洒钱</div>
+            <small>也称刘海戏金蟾。刘海，号海蟾子，五代后梁广陵人，喜道学。事燕主刘守光为相，后受仙人点悟，弃官遁迹，从纯阳学道于终南山，仙成，化鹤而去。道家南宗奉之为祖，后人当作福神。“刘海洒钱”寓意放弃功名利禄，淡泊修行；也用于赞扬人们视金钱如粪土的品格。金蟾有三足，古人视作灵物，可以致富，故有“刘海戏金蟾，步步钓金钱”之说。</small>
+        </div>
+        <div class="display_view_ins" id="display_view_ins_2">
+            <div class="display_view_ins_title">东方朔捧桃</div>
+            <small>又称东方朔取桃、东方朔偷桃。东方朔（公元前154—前93年），字曼倩，西汉名士，学问渊博，擅辞赋，性诙谐，被汉武帝召为侍臣。传说东方朔曾三次偷食王母蟠桃，而此桃是三千年一开花，三千年一结果，食一个，寿与天齐，故东方朔被奉为寿星，后世以东方朔偷桃寓意长寿，常用作祝寿之用。</small>
+        </div>
+        <div class="display_view_ins" id="display_view_ins_3">
+            <div class="display_view_ins_title">丁山射雁</div>
+            <small>取自《薛仁贵征东》。薛仁贵投军后，其妻柳迎春生下儿子丁山，得母亲、乳母周济度日，丁山长大后射雁卖雁养亲。薛仁贵在战场立功受爵，回乡探妻。途中遇丁山一箭双雁，惊讶其箭法，有心买下双雁。山前忽来一猛虎，仁贵恐男孩受害，用箭射虎，不料误射男孩，且被虎叼入山中。至寒窑，夫妻相会，始知误射的男孩为儿子丁山，夫妻悲伤不已。</small>
+        </div>
+        <div class="display_view_ins" id="display_view_ins_4">
+            <div class="display_view_ins_title">岳家庄</div>
+            <small>又称岳云出世，取材于《说岳全传》。岳飞之子岳云幼时在家瞒着母亲，练习武艺，锤法尤精。一天，金兵突来袭击岳家庄，岳云的祖母与母亲束手无策；岳云与其姊银屏带领家丁出庄拒敌，大败金兵，并生擒金将，全庄得保无恙。知岳飞被困牛头山，请缨上阵助父。最后以锤击金蝉子，解了牛头山之危。</small>
+        </div>
+    </div>
+
+
+</div><!-- /page -->
+<script type="text/javascript" src="js/display.js"></script>
+</body>
+</html>
