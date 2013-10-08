@@ -139,8 +139,13 @@ $(function(){
 //                var obj =document.getElementById("taihe");
         var ids=this.id;
         var info_id="#tips_info_"+ids.substr(10);
-        var src =baseAudio+$(info_id).val()+".mp3";
+        var name =$(info_id).val();
 
+        if(!checkAudioName(name)){
+            return ;
+        }
+
+        var src =baseAudio+name+".mp3";
         if(baseMedia!=null && baseMedia!='undefined')
             baseMedia.stop();
 
@@ -237,7 +242,9 @@ $(function(){
     $(".tipsList").click(function(){
         var sub=this.id+"_sub";
         var info_id="#tips_info_"+this.id.substr(3);
+        var name=$(info_id).val();
         $("#white_content").slideUp("slow");
+
         if($("#"+sub).css("display")=="block"){
             $(".subTipsList").hide();
             $("#"+sub).hide();
@@ -246,7 +253,14 @@ $(function(){
             displayFourIcon(this.id,'show');
 
             /*音频设置*/
-            var src =baseAudio+$(info_id).val()+".mp3";
+            if(name.indexOf("xiting") > -1){
+                name = "xiting";
+            }else if(name.indexOf("dongting") > -1){
+                name = "dongting";
+            }
+
+
+            var src =baseAudio+name+".mp3";
             storage.setItem("mp3",src);
         }else{
             $(".subTipsList").hide();
@@ -254,7 +268,7 @@ $(function(){
             $("#"+sub).css("z-index","100");
             $("#"+sub).show();
             $(".index_display").hide();
-            var name=$(info_id).val();
+
             if(name!='zhongting'&&name!='hxz'&&name!='hdz'&&name!='hdx'&&name!='qxz'&&name!='zxx'&&name!='hxx'&&name!='zdx'&&name!='qdz'&&name!='hxz'){
                 displayFourIcon(this.id,'hide');
             }
@@ -616,8 +630,11 @@ function displayFourIcon(id,dis){
     } else{
         alert('参数错误');
     }
-
-
+}
+function checkAudioName(name){
+      if(name=='hdz' || name=='hxx' || name=='hxz' || name=='qdz' || name=='qxx' || name=='qxz' || name=='zdx' || name=='zxx')
+      return false;
+    return true;
 }
 
 function horseNews(){

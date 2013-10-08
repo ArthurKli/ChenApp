@@ -93,10 +93,10 @@
 #tip20 {
     top: 15%;
     left: 14%;
-    background-image: url("images/icon/12.png");
+    background-image: url("images/icon/18.png");
     background-repeat: no-repeat;
     z-index: 146;
-    display:none;
+
 }
 
 #tip7 {
@@ -146,3 +146,5 @@
     background-repeat: no-repeat;
     z-index: 160;
 }
+
+
